@@ -3,7 +3,7 @@
     color: blue;
 }
 
-/* 2. 태그 선택자 : 태그명*/
+/* 2. 태그 선택자 */
 h3 {
     background-color: yellow;
 }
@@ -19,41 +19,40 @@ p {
     font-size: 30px;
 }
 
-/* 4. 아이디 선택자 */
 #id1 {
     color: orange;
 }
 
-/* 5. 그룹 선택자*/
+/* 5. 그룹 선택자 */
 #select1, #select2 {
     background-color: blanchedalmond;
 }
 
 /* 6. 자식 선택자와 자손 선택자 */
 #test1 > * {
-    background-color: pink;
+    background: pink;
 }
 #test1 li {
     color: red;
 }
 #test1 > ul > li {
-    background-color: darkcyan;
+    background: darkcyan;
 }
 
 /* 7. 속성 선택자 */
 /* div 요소들 중 name 속성값이 name1과 "일치"하는 요소 (배경색 : orangered) */
 div[name=name1] {
-    background-color: orangered;
+    background: orangered;
 }
 
-/* div 요소들 중 class 속성값에 -c가 "포함"되어 있는 경우 (글자색 : red) */
-div[name*=-c] {
+/* div 요소들 중 class 속성값에 -c가 "포함"되어 있는 요소 (글자색 : red) */
+div[class*=-c] {
     color: red;
 }
 
-/* div 요소들 중 name속성값이 na로 시작된느 요소 (배경색 : blue) */
+/* div 요소들 중 name속성값이 na로 "시작"되는 요소 (배경색 : blue) */
 div[name^=na] {
-    background-color: blue;
+    background: blue;
 }
 
 /* div 요소들 중 class 속성값이 ss로 "끝"나는 요소 (글자색 : white) */
@@ -62,15 +61,54 @@ div[class$=ss] {
 }
 
 /* 8. 형제 선택자 */
-
-#test2+div { /*바로 아래 선택*/
-    background-color: yellow;
+#test2+div {
+    background: yellow;
+}
+#test2+ul {
+    background: pink;
 }
 
-#test+ul {
-    background-color: pink;
+#test2~div{
+    background: beige;
+}
+#test2~ul {
+    background: deeppink;
 }
 
-#test2~div {
-    background-color: beige;
+/* 9. 반응 선택자 */
+.area {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#active-test:active {
+    background: yellow;
+    color: red;
+}
+#hover-test:hover {
+    background: maroon;
+    color: white;
+}
+
+/*input의 name이 user로 시작하는 선택자 */
+input[name^=user]:focus {
+    background: pink;
+}
+
+/* 10. 상태 선택자 */
+input[type=checkbox]:checked {
+    width:20px;
+    height:20px;
+}
+/* input checkbox 선택자 옆에 있는 label (체크된 상태만 */
+input[type=checkbox]:checked + label {
+    font-size: 20px;
+}
+/* 클릭 가능할 때 */
+button:enabled { 
+    background: violet;
+}
+/* 클릭 불가능할 때 */
+button:disabled {
+    background: yellowgreen;
 }
