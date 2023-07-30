@@ -10,79 +10,77 @@
 
     <!-- 객체 생성 -->
     <script>
-        const age = 12;
-        const person = {};
-        //const person2 = new Object(); 잘 안씀!
+    const age = 12;
+    const person = {};
+    // const person2 = new Object(); 잘 안 씀!!
 
-        console.log(person);
+    person.name = 'aaa';
+    person.age = 9;
+    person.hello = function() {
+        console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+    }
 
-        person.name = 'aaa';
-        person.age = 9;
-        person.hello = function() {
+    console.log(person);
+    person.hello();
+
+    console.log(window.name);
+    // window.alert("!!!!");
+
+    const person2 = {
+        name: 'xxx',
+        age: 15,
+        hello : function() {
             console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
         }
+    }
 
-        console.log(person);
-        person.hello();
+    person2.hello();
 
-        console.log(window.name);
-        //window.alert("!!!!"); // window.은 생략이 가능
-
-        // 객체 시작할때 넣고 시작하는 방식
-        const person2 = {
-            name: 'xxx',
-            age: 15,
-            hello : function() {
-                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
-            }
-        }
-
-        person2.hello();
     </script>
 
     <!-- 생성자 함수 -->
     <script>
-        function Person(name, age) {
-            this.name = name;
-            this.age = age;
-            this.hello = function() {
-                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
-            }
-        }
-        const p1 = new Person('bbb', 2);
-        console.log(p1);
-        p1.hello();
-
-        
-        function Person2(name, age){
-            this.name = name;
-            this.age = age;
-        }
-        Person2.prototype.hello= function(){
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hello = function() {
             console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
         }
-        const p2 = new Person2('ccc',3);
-        console.log(p2);
-        p2.hello();
+    }
+
+    const p1 = new Person('bbb', 2);
+    console.log(p1);
+    p1.hello();
+
+
+    function Person2(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person2.prototype.hello = function() {
+            console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+    const p2 = new Person2('ccc', 3);
+    console.log(p2);
+    p2.hello();
     </script>
 
     <!-- 클래스 -->
     <script>
-        class Person3 {
-            constructor(name, age) {
-                this.name = name;
-                this.age = age;
-            }
-
-            hello() {
-                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
-            }
+    class Person3 {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
         }
 
-        const p3 = new Person3('ddd', 4);
-        console.log(p3);
-        p3.hello();
-    </script>
+        hello() {
+            console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+    }    
 
+    const p3 = new Person3('ddd', 4);
+    console.log(p3);
+    p3.hello();
+    </script>
 </body>
 </html>

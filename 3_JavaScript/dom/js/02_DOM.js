@@ -37,9 +37,9 @@ function btn6() {
 
 function btn7() {
     // div 2개 가지고 오세요~ divList : 변수명
-    const divList = document.querySelectorAll(".testClass")
-    divList[0].textContent = '<span>안녕하세요</span>'
-    divList[1].innerHTML = '<span>안녕하세요</span>'
+    const divList = document.querySelectorAll(".testClass");
+    divList[0].textContent = '<span>안녕하세요</span>';
+    divList[1].innerHTML = '<span>안녕하세요</span>';
 }
 
 function btn8() {
@@ -69,7 +69,8 @@ function btn11() {
 function btn12() {
     const div2 = document.querySelector("#testId2");
     const check = div2.classList.contains("black");
-    if(check){
+    console.log(check);
+    if(check) {
         div2.classList.remove("black");
     } else {
         div2.classList.add("black");
