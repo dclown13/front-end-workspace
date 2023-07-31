@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정규표현식을 활용한 회원가입 폼</title>
+    <script src="js/연습문제4.js"></script>
     <style>
     form {
         border: 1px solid #ccc;
@@ -63,61 +64,61 @@
     const userName = document.querySelector('#userName');
     const email = document.querySelector('#email');
 
-    function userIdCheck() {
-        const regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
-        return regExp.test(userId.value);
-    }
+    // function userIdCheck() {
+    //     const regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
+    //     return regExp.test(userId.value);
+    // }
 
-    function userPwd1Check() {
-        const regExp = /^[!-~]{8,15}$/;
-        const regExp2 = /[!-/:-@[-`{-~]/;
-        return regExp.test(userPwd1.value) && regExp2.test(userPwd1.value);
-    }
+    // function userPwd1Check() {
+    //     const regExp = /^[!-~]{8,15}$/;
+    //     const regExp2 = /[!-/:-@[-`{-~]/;
+    //     return regExp.test(userPwd1.value) && regExp2.test(userPwd1.value);
+    // }
 
-    function userPwd2Check() {
-        return userPwd1.value === userPwd2.value;
-    }
+    // function userPwd2Check() {
+    //     return userPwd1.value === userPwd2.value;
+    // }
 
-    function userNameCheck() {
-        const regExp = /^[가-힣]{2,}$/;
-        return regExp.test(userName.value);
-    }
+    // function userNameCheck() {
+    //     const regExp = /^[가-힣]{2,}$/;
+    //     return regExp.test(userName.value);
+    // }
 
-    function emailCheck() {
-        const regExp = /^[\w\.]+@[a-z]+\.[a-z]+$/;
-        return regExp.test(email.value);
-    }
+    // function emailCheck() {
+    //     const regExp = /^[\w\.]+@[a-z]+\.[a-z]+$/;
+    //     return regExp.test(email.value);
+    // }
 
-    function validate() {
-        if(!userIdCheck()) {
-            userId.focus();
-            return false;
-        } else if(!userPwd1Check()) {
-            userPwd1.focus();
-            return false;
-        } else if(!userPwd2Check()) {
-            userPwd2.focus();
-            return false;
-        } else if(!userNameCheck()) {
-            userName.focus();
-            return false;
-        } else if(!emailCheck()) {
-            email.focus();
-            return false;
-        } else {
-            return true;
-        }
-    }
+    // function validate() {
+    //     if(!userIdCheck()) {
+    //         userId.focus();
+    //         return false;
+    //     } else if(!userPwd1Check()) {
+    //         userPwd1.focus();
+    //         return false;
+    //     } else if(!userPwd2Check()) {
+    //         userPwd2.focus();
+    //         return false;
+    //     } else if(!userNameCheck()) {
+    //         userName.focus();
+    //         return false;
+    //     } else if(!emailCheck()) {
+    //         email.focus();
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
 
-    function inputHandler(event, check, message) {
-        if(!check) {
-            event.target.nextElementSibling.style.color = 'red';
-            event.target.nextElementSibling.innerHTML = message;
-        } else {
-            event.target.nextElementSibling.style.color = 'green';
-            event.target.nextElementSibling.innerHTML = 'OK!';
-        }
-    }
+    // function inputHandler(event, check, message) {
+    //     if(!check) {
+    //         event.target.nextElementSibling.style.color = 'red';
+    //         event.target.nextElementSibling.innerHTML = message;
+    //     } else {
+    //         event.target.nextElementSibling.style.color = 'green';
+    //         event.target.nextElementSibling.innerHTML = 'OK!';
+    //     }
+    // }
 
     email.addEventListener('input', function() {
         inputHandler(event, emailCheck(), '이메일 형식에 맞춰서 입력하시오.');
