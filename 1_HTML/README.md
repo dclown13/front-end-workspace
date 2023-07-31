@@ -326,7 +326,7 @@
 ## 관련 태그
 
 1. table : 테이블의 외곽선 표시
-2. tr(Table Row) : 테이블의 행(줄) 구분
+2. tr(Table Row) : 테이블병합의 행(줄) 구분
 3. td(Table Data Cell) : 셀(칸) 생성
 
 ## 셀 병합 속성

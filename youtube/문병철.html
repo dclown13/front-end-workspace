@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문병철</title>
+</head>
+<body>
+    <form action="insert.no" method="post">
+        <h3>제목<input type="text" name="title"></h3>
+        <h3>내용<input type="text" name="content"></h3>
+        <h3>첨부파일<button name="uploadFile">파일 선택</button></h3>
+        <button>작성하기</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th colspan="2" id="titles">제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">전체공지사항 갯수</th>
+                <th colspan="2">개</th>
+            </tr>
+        </tfoot>
+    </table>
+    <style>
+        th {
+            background-color: darkorange;
+            color: white;
+        }
+        td {
+            background-color: bisque;
+        }
+        #titles {
+            width: 50rch;
+        }
+    </style>
+</body>
+</html>
