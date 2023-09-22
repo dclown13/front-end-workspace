@@ -12,21 +12,21 @@
 .box {
     width: 150px;
     height: 150px;
-    background-color: rgba(184, 9, 228, 0.5);
+    background-color: rgba(172, 94, 192, 0.5);
     border: 2px solid black;
     transition: 1s;
     transition: 0.5s linear;
-    transition: 1s cubic-bezier(0.54, 0.85, 0,-0.24);
+    /* transition: 1s cubic-bezier(0.54, 0.85, 0,-0.24); */
 }
 
 .box:hover {
     transform: scale(2);
-    transform: rotate(45deg);
+    /* transform: rotate(45deg);
     transform: skew(30deg);
     transform: skewY(30deg);
     transform: translateX(100px);
     transform: translate(50px, 100px);
-    transform: scale(1.5) rotate(30deg);
+    transform: scale(1.5) rotate(30deg); */
     
     transform-origin: left top;
     transform-origin: right bottom;
