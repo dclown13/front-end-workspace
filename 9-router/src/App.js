@@ -45,8 +45,14 @@ const Create = ({addBeverage}) => {
   
   return (
     <form onSubmit={onSubmit}>
-      <div><label htmlFor="title">음료명 : </label><input type="text" id="title" name="title" placeholder="음료명 입력"/></div>
-      <div><label htmlFor="desc">설명 : </label><input type="text" id="desc" name="desc" placeholder="설명 입력"/></div>
+      <div>
+        <label htmlFor="title">음료명 : </label>
+        <input type="text" id="title" name="title" placeholder="음료명 입력"/>
+      </div>
+      <div>
+        <label htmlFor="desc">설명 : </label>
+        <input type="text" id="desc" name="desc" placeholder="설명 입력"/>
+      </div>
       <input type="submit" value="추가"/>
     </form>
   );
